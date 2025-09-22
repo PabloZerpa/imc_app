@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:imc_app/core/colors.dart';
-import 'package:imc_app/core/text_styles.dart';
+import 'package:imc_app/screens/home_screen.dart';
+import "core/colors.dart";
 
 void main() {
   runApp(const MainApp());
@@ -18,9 +18,7 @@ class MainApp extends StatelessWidget {
           title: const Text("IMC Calculator"),
           foregroundColor: Colors.white),
         backgroundColor: AppColors.bg,
-        body: const Center(
-          child: Text('Hello World!'),
-        ),
+        body: Home(),
       ),
     );
   }
