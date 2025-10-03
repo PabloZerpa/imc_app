@@ -3,7 +3,9 @@ import 'package:imc_app/core/colors.dart';
 import 'package:imc_app/core/text_styles.dart';
 
 class HeightSelector extends StatefulWidget {
-  const HeightSelector({super.key});
+  final double value;
+  final Function(double) onSelectedHeight;
+  const HeightSelector({super.key, required this.value, required this.onSelectedHeight});
 
   @override
   State<HeightSelector> createState() => _HeightSelectorState();
@@ -24,13 +26,11 @@ class _HeightSelectorState extends State<HeightSelector> {
         child: Column(
           children: [
             Text("ALTURA"),
-            Text("${height.toStringAsFixed(0)} cm", style: TextStyles.bodyText,),
+            Text("${widget.value.toStringAsFixed(0)} cm", style: TextStyles.bodyText,),
             Slider(
-              value: height, 
+              value: widget.value, 
               onChanged: (value) {
-                setState(() {
-                  height = value;
-                });
+                widget.onSelectedHeight(value);
               }, 
               min: 150, 
               max: 210,
