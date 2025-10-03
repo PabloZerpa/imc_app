@@ -1,0 +1,19 @@
+
+*.dart linguist-language=Dart
+*.dart linguist-detectable=true
+
+
+*.c linguist-detectable=false
+*.cpp linguist-detectable=false
+*.h linguist-detectable=false
+*.m linguist-detectable=false
+*.swift linguist-detectable=false
+*.java linguist-detectable=false
+*.kt linguist-detectable=false
+
+
+pubspec.yaml linguist-language=YAML
+pubspec.lock linguist-language=YAML
+*.json linguist-language=JSON
+*.xml linguist-language=XML
+*.md linguist-language=Markdown
